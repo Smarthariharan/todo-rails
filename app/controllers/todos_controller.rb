@@ -44,4 +44,9 @@ class TodosController < ApplicationController
     @todo = Todo.find(params[:id])
     @todo.delete
   end
+
+  def delete_all_todos
+  DeleteAllTodos.perform_async()
+  render json: { message: 'Deletion job enqueued successfully'}
+  end
 end

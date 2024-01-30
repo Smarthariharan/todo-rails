@@ -29,6 +29,12 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# redis is used to store data as queue in web server
+gem 'redis' 
+
+# sidekiq is used to reduce background processing time or able to make asynchronous
+gem 'sidekiq' 
+
 #Using this gem for serializers
 gem 'active_model_serializers', '~> 0.10.0'
 
